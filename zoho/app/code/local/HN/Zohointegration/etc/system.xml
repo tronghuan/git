@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+		<magnenest module="zohointegration">
+			<label>Magenest</label>
+			<sort_order>120</sort_order>
+		</magnenest>
+	</tabs>
+	<sections>
+		<zohointegration translate="label" module="zohointegration">
+			<label>ZohoCRM Integration Setting</label>
+			<tab>magnenest</tab>		
+			<sort_order>100</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>			
+			<groups>
+				<auth translate="label">
+					<label>Config account of ZohoCRM</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>10</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<fields>						
+                        <user_id>
+							<label>Email of ZohoCRM</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <comment>Email of ZohoCRM</comment>
+						</user_id>
+						<password>
+						    <label>Password of ZohoCRM</label>
+							<frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <comment>Password of ZohoCRM</comment>
+						</password>						
+						<auth_key>
+						    <label>Auth Token</label>
+							<frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website> 
+                            <comment>Get from link "https://accounts.zoho.com/u/h#sessions/userauthtoken" or empty box</comment>
+                        </auth_key>						
+					</fields>
+				</auth>
+			</groups>
+			 <groups>
+				<sync>
+					<label>Sync Table</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>20</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<fields>
+						<account>
+						    <label>Sync Account</label>
+						    <source_model>adminhtml/system_config_source_yesno</source_model>
+							<frontend_type>select</frontend_type>
+							<sort_order>100</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+						</account>	
+						<lead>
+							<label>Sync Lead</label>
+							<frontend_type>select</frontend_type>
+							<sort_order>130</sort_order>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>							
+						</lead>
+						<contact>
+							<label>Sync Contact</label>
+							<frontend_type>select</frontend_type>
+							<sort_order>140</sort_order>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+						</contact>
+						<campaign>
+							<label>Sync Campaign</label>
+							<frontend_type>select</frontend_type>
+							<sort_order>140</sort_order>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+						</campaign>
+						<invoice>
+						    <label>Sync Invoice</label>
+						    <source_model>adminhtml/system_config_source_yesno</source_model>
+							<frontend_type>select</frontend_type>
+							<sort_order>160</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+						</invoice>	
+						<order>
+						    <label>Sync SalesOrder</label>
+						    <source_model>adminhtml/system_config_source_yesno</source_model>
+							<frontend_type>select</frontend_type>
+							<sort_order>170</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+						</order>					
+						<product>
+						    <label>Sync Product</label>
+						    <source_model>adminhtml/system_config_source_yesno</source_model>
+							<frontend_type>select</frontend_type>
+							<sort_order>180</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+						</product>
+						<subscriber>
+						    <label>Sync Subscriber</label>
+						    <source_model>adminhtml/system_config_source_yesno</source_model>
+							<frontend_type>select</frontend_type>
+							<sort_order>190</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+						</subscriber>
+					</fields>
+				</sync>
+			</groups>
+		</zohointegration>
+	</sections>
+</config>
+                      

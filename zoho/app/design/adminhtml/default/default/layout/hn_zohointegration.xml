@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <zohointegration_admin_adminhtml_map_new>    	
+        <reference  name="head">
+	        <action method="addJs"><script>adminhtml/hn/zohointegration/jquery-2.1.4.min.js</script></action>
+	        <action method="addJs"><script>adminhtml/hn/zohointegration/noConflict.js</script></action>
+     	</reference>
+     	<reference name ="content">
+     		<block type="zohointegration/adminhtml_update" name="loadfields" template="hn/zohointegration/loadfields.phtml"/>
+     	</reference>
+	</zohointegration_admin_adminhtml_map_new>    
+</layout>

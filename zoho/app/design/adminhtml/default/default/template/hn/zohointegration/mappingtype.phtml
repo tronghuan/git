@@ -1,0 +1,44 @@
+<script type="text/javascript">
+<!--
+
+//-->
+function zohocontinue() {
+var urlmapping ='<?php echo  Mage::helper('core/url')->getCurrentUrl() ?>';
+var type = $('map_type').getValue();
+window.location.href =urlmapping + "type/" + type;
+}
+</script>
+<div style="" id="product_info_tabs_set_content"><div class="entry-edit">
+    <div class="entry-edit-head">
+    <h4 class="icon-head head-edit-form fieldset-legend">Create Magento Zoho CRM Field Mapping</h4>
+    <div class="form-buttons"></div>
+</div>
+    <div id="settings" class="fieldset ">
+    <div class="hor-scroll">
+    <table cellspacing="0" class="form-list">
+        <tbody>
+			<tr>
+			    <td class="label"><label for="product_type">Type</label></td>
+			    <td class="value">
+			        <select class=" select" title="Type" name="type" id="map_type">
+						<option value="lead"><?php echo __('Lead') ?></option>
+						<option value="contact"><?php echo __('Contact') ?></option>
+						<option value="account"><?php echo __('Account') ?></option>
+						<option value="product"><?php echo __('Product') ?></option>
+						<option value="invoice"><?php echo __('Invoice') ?></option>
+						<option value="salesorder"><?php echo __('Sales Order') ?></option>
+						<option value="campaign"><?php echo __('Campaign') ?></option>
+					</select>            
+				</td>
+			</tr>
+			<tr>
+	        <td class="label"></td>
+	  		<td class="value">
+	        <span id="continue_button"><button data-key="<?php echo $this->getFormKey() ?>"  style="" onclick="zohocontinue()" class="scalable save" type="button" title="Continue" ><span><span><span><?php echo __('Continue') ?></span></span></span></button></span>            </td>
+	    	</tr>
+        </tbody>
+    </table>
+    </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,38 @@
+<script>
+jQuery("#type").change(function(){
+	var url = "<?php echo $this->getLoadUrl()?>";
+	var type =  jQuery(this).val();
+	var data = {'type' : type};
+	jQuery.ajax({
+        type: "GET",
+        url: url,
+        data: data,
+        success: function (response) {
+            var responseObj = JSON.parse(response);
+            console.log(responseObj);
+            jQuery('#magento').html(responseObj.magento_options);
+            jQuery('#zoho').html(responseObj.zoho_options);
+        },
+        beforeSend: function(){
+           jQuery('#loading-mask').show();
+        },
+        complete: function(){           
+           jQuery('#loading-mask').hide();
+        }
+    });
+});
+jQuery("#updateFields").click(function(){
+    var url = "<?php echo $this->getUpdateUrl()?>";    
+    jQuery.ajax({
+        type: "GET",
+        url: url,
+        data: {'update' : 'ok'},
+        beforeSend: function(){
+           jQuery('#loading-mask').show();
+        },
+        complete: function(){           
+           jQuery('#loading-mask').hide();
+        }
+    });
+});
+</script>

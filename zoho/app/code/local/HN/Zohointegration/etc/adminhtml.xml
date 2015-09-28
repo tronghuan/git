@@ -1,0 +1,94 @@
+<config>
+    <menu>
+        <zohointegration module="zohointegration">
+            <title>ZohoCRM Integration</title>
+            <sort_order>100</sort_order>
+            <children>
+                <map module="zohointegration">
+                    <title>Field Mapping</title>
+                    <sort_order>10</sort_order>
+                    <action>zohointegration_admin/adminhtml_map/index</action>
+                </map>
+                <report translate="title" module="zohointegration">
+                    <title>Report</title>
+                    <sort_order>20</sort_order>
+                    <action>zohointegration_admin/adminhtml_report/index</action>
+                </report>
+                <retrieve translate="title" module="zohointegration">
+                    <title>Retrieve Field</title>
+                    <sort_order>30</sort_order>
+                    <action>zohointegration_admin/adminhtml_retrieve/index</action>
+                </retrieve> 
+                <config module="zohointegration">
+                    <title>Configuration</title>
+                    <sort_order>40</sort_order>
+                    <action>adminhtml/system_config/edit/section/zohointegration</action>
+                </config>
+            </children>
+        </zohointegration>
+    </menu>
+    <layout>
+        <updates>
+            <zohointegration>
+                <file>HN_Zohointegration.xml</file>
+            </zohointegration>
+        </updates>
+    </layout>
+    <translate>
+        <modules>
+            <HN_Zohointegration>
+                <files>
+                    <default>HN_Zohointegration.csv</default>
+                </files>
+            </HN_Zohointegration>
+        </modules>
+    </translate>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <zohointegration translate="title" module="zohointegration">
+                                        <title>ZohoCRM Integration Settings</title>
+                                    </zohointegration>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <zohointegration module="zohointegration">
+                        <title>ZohoCRM Integration</title>
+                         <sort_order>100</sort_order>
+                        <children>                            
+                            <map module="zohointegration">
+                                <title>Field Mapping</title>
+                                <sort_order>10</sort_order>
+                                <action>zohointegration_admin/adminhtml_map/index</action>
+                            </map>
+                            <report translate="title" module="zohointegration">
+                                <title>Report</title>
+                                <sort_order>20</sort_order>
+                                <action>zohointegration_admin/adminhtml_report/index</action>
+                            </report>
+                            <retrieve translate="title" module="zohointegration">
+                                <title>Retrieve Field</title>
+                                <sort_order>30</sort_order>
+                                <action>zohointegration_admin/adminhtml_retrieve/index</action>
+                            </retrieve> 
+                            <config module="zohointegration">
+                                <title>Configuration</title>
+                                <sort_order>40</sort_order>
+                                <action>adminhtml/system_config/edit/section/zohointegration</action>
+                            </config>
+                        </children>
+                    </zohointegration>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
